@@ -1,0 +1,32 @@
+{
+  "name": "edwinhoksberg/slim-framework-skeleton",
+  "description": "A skeleton framework with built-in features, made with Slim Framework 2.0",
+  "type": "project",
+  "keywords": ["slim framework", "slim", "skeleton"],
+  "license": "MIT",
+  "homepage": "https://github.com/EdwinHoksberg/slim-framework-skeleton",
+  "authors": [
+        {
+            "name": "Edwin Hoksberg",
+            "email": "info@edwinhoksberg.nl",
+            "homepage": "https://github.com/EdwinHoksberg",
+            "role": "Developer"
+        }
+  ],
+  "require": {
+    "slim/slim": "~2.0",
+    "slimcontroller/slimcontroller": "0.4.3",
+    "slim/views": "^0.1.3",
+    "twig/twig": "~1.0",
+    "vlucas/phpdotenv": "^2.0",
+    "slim/logger": "0.1.*",
+    "zeuxisoo/slim-whoops": "0.3.0",
+    "j4mie/paris": "^1.5"
+  },
+  "autoload": {
+    "psr-0": {
+      "app": "",
+      "src": ""
+    }
+  }
+}
