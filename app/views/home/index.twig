@@ -1,14 +1,11 @@
 {% extends 'templates/master.twig' %}
 {% block body %}
-    <script type="text/javascript">
-        var endTime = new Date("{{ deadline }}");
-    </script>
    <div class="csvg generic">
        <div class="csvg-digit" data-tad-bind="seconds" style="text-align: center; width: 100%">
-           <div id="el_s1" class="csvg-digit-number" style="font-size: 250px;">34</div>
+           <div id="s1" class="csvg-digit-number" style="font-size: 250px;">34</div>
        </div>
        <div class="csvg-digit" data-tad-bind="seconds" style="text-align: center; width: 100%">
-           <div id="el_s2" class="csvg-digit-number" style="font-size: 250px;">34</div>
+           <div id="s2" class="csvg-digit-number" style="font-size: 250px;">34</div>
        </div>
        {# <div class="csvg-digit" data-tad-bind="minutes" style="text-align: right; width: 50%;">
             <div id="el_m1" class="csvg-digit-number">36</div></div>
