@@ -1,22 +1,19 @@
 {% extends 'templates/master.twig' %}
 {% block body %}
-   <div class="csvg generic hassvg fullscreen">
-        <div class="csvg-digit" data-tad-bind="hours">
-            <div id="el_h1" class="csvg-digit-number">23</div></div>
-        <div class="csvg-digit" data-tad-bind="minutes">
+    <script type="text/javascript">
+        var endTime = new Date("{{ deadline }}");
+    </script>
+   <div class="csvg generic">
+       <div class="csvg-digit" data-tad-bind="seconds" style="text-align: center; width: 100%">
+           <div id="el_s1" class="csvg-digit-number" style="font-size: 250px;">34</div>
+       </div>
+       <div class="csvg-digit" data-tad-bind="seconds" style="text-align: center; width: 100%">
+           <div id="el_s2" class="csvg-digit-number" style="font-size: 250px;">34</div>
+       </div>
+       {# <div class="csvg-digit" data-tad-bind="minutes" style="text-align: right; width: 50%;">
             <div id="el_m1" class="csvg-digit-number">36</div></div>
-        <div class="csvg-digit" data-tad-bind="seconds">
-            <div id="el_s1" class="csvg-digit-number" style="font-size: 250px;">34</div></div>
+       <div class="csvg-digit" data-tad-bind="hours" style="text-align: right; width: 50%;">
+           <div id="el_h1" class="csvg-digit-number">23</div></div>#}
     </div>
 {% endblock %}
 
-{% block script %}
-    <script type="text/javascript">
-        var handler = window.setInterval(function () {
-        var diff = (endTime.getTime() - (new Date()).getTime()) / 1000;
-        var hours = parseInt(diff / 60 / 60);
-        var minutes = parseInt((diff - (hours * 60 * 60)) / 60);
-        var seconds = parseInt(diff - ((hours * 60 * 60) + (minutes * 60)));
-        }, 1000);
-    </script>
-{% endblock %}

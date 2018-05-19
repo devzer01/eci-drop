@@ -55,6 +55,19 @@ gulp.task('js', function() {
     }
 });
 
+
+
+var exec = require('child_process').exec;
+
+gulp.task('web', ['sass', 'js', 'watch'], function (cb) {
+    exec('php -S localhost:8888 -t public public/index.php\n', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
+
+
 /**
  * Watches the javascript and css folders for changes.
  * If there was a change, the appropriate task will be executed.
